@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { cartReducer } from '../slices/counterSlice';
+import { counterReducer } from '../slices/counterSlice';
 import storage from 'redux-persist/lib/storage';
 import {
   persistStore,
@@ -18,7 +18,7 @@ const persistConfig = {
 }
 
 
-const persistedReducer = persistReducer(persistConfig, cartReducer)
+const persistedReducer = persistReducer(persistConfig, counterReducer)
 
 export const store = configureStore({
   reducer: {
