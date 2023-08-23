@@ -33,20 +33,14 @@ export default function Counter() {
     const handleClick = (item, action) => {
         let data = item.data
         let id = item.id
-        // // dispatch(addToCart({data,id,action}))
-        // // dispatch(incrementQuantity(item.id))
-        // dispatch(decrementQuantity(item.id))
-        if (count[item.id]) {
-            // dispatch(addToCart({data,id}))
+         if (count[item.id]) {
             action == 'increment' ? dispatch(incrementQuantity(item.id)) : dispatch(decrementQuantity(item.id))
         }
         else {
             dispatch(addToCart({ data, id }))
-
         }
     }
-    //     console.log("==outsidenum==",num)
-
+    
     return (
         <main className={styles.main}>
 
